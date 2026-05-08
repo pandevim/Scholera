@@ -1,0 +1,7 @@
+{
+  "outputDirectory": "ui",
+  "framework": null,
+  "buildCommand": null,
+  "cleanUrls": true,
+  "trailingSlash": false
+}

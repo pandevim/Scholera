@@ -378,7 +378,6 @@ function EmptyState({ pdfs, onPick }) {
               <span>{p.title.replace(/^Lecture \d+: /, "")}</span>
             </div>);
           })}
-          ))}
         </div>
       </div>
     </div>
