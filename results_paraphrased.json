@@ -1,0 +1,284 @@
+{
+  "e2e": [
+    {
+      "id": "factual-attention-formula",
+      "category": "single-source factual",
+      "query": "What is the formula for scaled dot-product attention?",
+      "tier": "pass",
+      "expected_tier": [
+        "pass"
+      ],
+      "tier_ok": true,
+      "expected_in_retrieved": true,
+      "expected_in_cited": true,
+      "must_contain_ok": true,
+      "passed": true,
+      "final_answer": "The formula for scaled dot-product attention is given by $\\text{Attention}(Q, K, V) = \\text{softmax}\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right)V$ [L6_S27]. This mechanism involves computing a weighted combin",
+      "top_retrieved": [
+        "L6_S27",
+        "L6_S49",
+        "L5_S107",
+        "L6_S22",
+        "L6_S23"
+      ]
+    },
+    {
+      "id": "synthesis-word2vec-transformer",
+      "category": "cross-lecture synthesis",
+      "query": "How do word2vec embeddings relate to the input representations used by transformers?",
+      "tier": "pass",
+      "expected_tier": [
+        "pass",
+        "strip_smooth"
+      ],
+      "tier_ok": true,
+      "expected_in_retrieved": true,
+      "expected_in_cited": true,
+      "must_contain_ok": true,
+      "passed": true,
+      "final_answer": "Classical word embeddings like GloVe are not used in modern transformer models; all subword representations are randomly initialized and learned within the Transformer models [L4_S138]. Instead, trans",
+      "top_retrieved": [
+        "L3_S66",
+        "L3_S2",
+        "L3_S28",
+        "L6_S37",
+        "L6_S36"
+      ]
+    },
+    {
+      "id": "diagram-seq2seq-attention",
+      "category": "diagram-grounded",
+      "query": "Walk me through the architecture shown in the seq2seq with attention diagram.",
+      "tier": "strip_smooth",
+      "expected_tier": [
+        "pass",
+        "strip_smooth"
+      ],
+      "tier_ok": true,
+      "expected_in_retrieved": true,
+      "expected_in_cited": true,
+      "must_contain_ok": true,
+      "passed": true,
+      "final_answer": "The decoder, initialized with a <START> token, computes attention scores by taking dot products with these encoder hidden states [L6_S7]. These scores are normalized into an attention distribution, wh",
+      "top_retrieved": [
+        "L5_S95",
+        "L6_S10",
+        "L6_S14",
+        "L6_S4",
+        "L6_S13"
+      ]
+    },
+    {
+      "id": "concept-vanishing-gradient",
+      "category": "concept clarification",
+      "query": "Why is the vanishing gradient a problem in RNNs?",
+      "tier": "pass",
+      "expected_tier": [
+        "pass",
+        "strip_smooth"
+      ],
+      "tier_ok": true,
+      "expected_in_retrieved": true,
+      "expected_in_cited": true,
+      "must_contain_ok": true,
+      "passed": true,
+      "final_answer": "The vanishing gradient problem occurs when the gradient signal becomes vanishingly small as it backpropagates through time, causing the model to only update weights based on near effects rather than l",
+      "top_retrieved": [
+        "L4_S52",
+        "L4_S69",
+        "L4_S68",
+        "L4_S3",
+        "L4_S70"
+      ]
+    },
+    {
+      "id": "ooc-refusal-alpha-beta",
+      "category": "out-of-corpus refusal",
+      "query": "Walk me through the alpha-beta pruning algorithm used in this course.",
+      "tier": "refused",
+      "expected_tier": [
+        "refused"
+      ],
+      "tier_ok": true,
+      "expected_in_retrieved": true,
+      "expected_in_cited": true,
+      "must_contain_ok": true,
+      "passed": true,
+      "final_answer": "I couldn't find a confident answer in the course materials for this question.",
+      "top_retrieved": [
+        "CS584_Midterm_Sample_s26_1_C1",
+        "final_report_format_guideline_C6",
+        "L5_S101",
+        "L6_S16",
+        "CS584_Midterm_Sample_s26_1_C2"
+      ]
+    },
+    {
+      "id": "policy-late-submission-unconstrained",
+      "category": "metadata isolation \u2014 soft signal",
+      "query": "What's the late submission policy?",
+      "tier": "pass",
+      "expected_tier": [
+        "pass"
+      ],
+      "tier_ok": true,
+      "expected_in_retrieved": true,
+      "expected_in_cited": true,
+      "must_contain_ok": true,
+      "passed": true,
+      "final_answer": "The late submission policy imposes a 10% penalty for submissions made within 24 hours of the deadline [L1_S13]. Submissions delayed between 24 and 48 hours incur a 20% penalty [L1_S13]. Any assignment",
+      "top_retrieved": [
+        "L1_S13",
+        "L1_S9",
+        "CS584_Midterm_Sample_s26_1_C1",
+        "L1_S8",
+        "course_project_guidelines_s26_C1"
+      ]
+    },
+    {
+      "id": "constraint-late-submission-guidelines-only",
+      "category": "metadata isolation \u2014 HARD constraint",
+      "query": "What's the late submission policy?",
+      "tier": "refused",
+      "expected_tier": [
+        "refused"
+      ],
+      "tier_ok": true,
+      "expected_in_retrieved": true,
+      "expected_in_cited": true,
+      "must_contain_ok": true,
+      "passed": true,
+      "final_answer": "I couldn't find a confident answer in the course materials for this question.",
+      "top_retrieved": [
+        "CS584_Midterm_Sample_s26_1_C1",
+        "course_project_guidelines_s26_C1",
+        "course_project_guidelines_s26_C18",
+        "final_report_rubrics_C12",
+        "course_project_guidelines_s26_C4"
+      ]
+    }
+  ],
+  "needle": [
+    {
+      "needle_chunk_id": "L10_S33",
+      "query": "How does the parser manage its internal state using a stack, a buffer, and a collection of dependency arcs?",
+      "rank": 1,
+      "in_top_5": true,
+      "in_top_10": true,
+      "in_top_20": true
+    },
+    {
+      "needle_chunk_id": "L1_S8",
+      "query": "What percentage of the final grade comes from the course project and its four required milestones?",
+      "rank": 2,
+      "in_top_5": true,
+      "in_top_10": true,
+      "in_top_20": true
+    },
+    {
+      "needle_chunk_id": "L1_S7",
+      "query": "Which book covers a landscape with purple flowers?",
+      "rank": 1,
+      "in_top_5": true,
+      "in_top_10": true,
+      "in_top_20": true
+    },
+    {
+      "needle_chunk_id": "L10_S34",
+      "query": "How does the parser handle adding a dependency relationship between two words when it shifts a new word onto the stack?",
+      "rank": 3,
+      "in_top_5": true,
+      "in_top_10": true,
+      "in_top_20": true
+    },
+    {
+      "needle_chunk_id": "L1_S13",
+      "query": "What happens to your grade if you turn in an assignment more than two days late?",
+      "rank": 1,
+      "in_top_5": true,
+      "in_top_10": true,
+      "in_top_20": true
+    },
+    {
+      "needle_chunk_id": "L1_S26",
+      "query": "What is the purpose of the highlighted word and the dropdown suggestions shown in the image?",
+      "rank": 6,
+      "in_top_5": false,
+      "in_top_10": true,
+      "in_top_20": true
+    },
+    {
+      "needle_chunk_id": "L10_S35",
+      "query": "What happens to the input buffer when the parser reaches the finish state?",
+      "rank": 1,
+      "in_top_5": true,
+      "in_top_10": true,
+      "in_top_20": true
+    },
+    {
+      "needle_chunk_id": "L10_S42",
+      "query": "Why do current neural dependency parsers struggle with speed and data efficiency?",
+      "rank": 1,
+      "in_top_5": true,
+      "in_top_10": true,
+      "in_top_20": true
+    },
+    {
+      "needle_chunk_id": "L1_S27",
+      "query": "What are two different ways predictive text can appear on a screen?",
+      "rank": 1,
+      "in_top_5": true,
+      "in_top_10": true,
+      "in_top_20": true
+    },
+    {
+      "needle_chunk_id": "L10_S40",
+      "query": "What is the difference between the unlabeled and labeled attachment scores for the sentence \"She saw the video lecture\"?",
+      "rank": 1,
+      "in_top_5": true,
+      "in_top_10": true,
+      "in_top_20": true
+    },
+    {
+      "needle_chunk_id": "L10_S57",
+      "query": "What does the Commerce Department's report indicate about machinery and primary metals production?",
+      "rank": 1,
+      "in_top_5": true,
+      "in_top_10": true,
+      "in_top_20": true
+    },
+    {
+      "needle_chunk_id": "L1_S28",
+      "query": "What does the figure illustrate about how Google Translate handles text in different languages?",
+      "rank": 2,
+      "in_top_5": true,
+      "in_top_10": true,
+      "in_top_20": true
+    },
+    {
+      "needle_chunk_id": "L2_S14",
+      "query": "How are the probabilities for the current word and the previous sequence of words calculated in this model?",
+      "rank": 5,
+      "in_top_5": true,
+      "in_top_10": true,
+      "in_top_20": true
+    },
+    {
+      "needle_chunk_id": "L7_S6",
+      "query": "What is the main reason for using pretraining when training models?",
+      "rank": 1,
+      "in_top_5": true,
+      "in_top_10": true,
+      "in_top_20": true
+    },
+    {
+      "needle_chunk_id": "L1_S29",
+      "query": "What is the purpose of the orange card in the middle of the diagram?",
+      "rank": 1,
+      "in_top_5": true,
+      "in_top_10": true,
+      "in_top_20": true
+    }
+  ],
+  "needle_paraphrased": true
+}
